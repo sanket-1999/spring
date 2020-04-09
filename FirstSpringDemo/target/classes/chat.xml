@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xmlns:context="http://www.springframework.org/schema/context"
+xsi:schemaLocation="http://www.springframework.org/schema/beans 
+http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+<bean id="chatroom1" class="com.spring.FirstSpringDemo.Chatroom"
+			scope="prototype">
+		<property name="id" value="games"/>
+		<property name="userList">
+		<set>
+		<value>Pratyush</value>
+		<value>Sanket</value>
+		<value>duplicate</value>
+		<value>duplicate</value>
+		</set>
+		</property>
+		<property name="messageList">
+		<list>
+		<value>Hello</value>
+		<value>Hi</value>
+		<value>byee</value>
+		</list>
+		</property>
+		
+	</bean>
+	<bean id="chatroom2" class="com.spring.FirstSpringDemo.Chatroom"
+			scope="prototype">
+		<property name="id" value="pubg"/>
+		<property name="userList">
+		<set>
+		<value>Sanket</value>
+		<value>Sanket</value>
+		<value>Sanket</value>
+		<value>Sanket</value>
+		</set>
+		</property>
+		<property name="messageList">
+		<list>
+		<value>Imprssive</value>
+		<value>Fall </value>
+		<value>enemies ahead</value>
+		<value>help!</value>
+		</list>
+		</property>
+		
+	</bean>
+	<bean id="chatroom3" class="com.spring.FirstSpringDemo.Chatroom"
+			scope="prototype">
+		<property name="id" value="COD"/>
+		<property name="userList">
+		<set>
+		<value>kenny s</value>
+		<value>shroud</value>
+		<value>kenny s</value>
+		<value>shroud</value>
+		</set>
+		</property>
+		<property name="messageList">
+		<list>
+		<value>CSGO</value>
+		<value>players</value>
+		<value>random msg</value>
+		</list>
+		</property>
+		
+	</bean>
+</beans>
