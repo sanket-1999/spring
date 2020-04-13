@@ -11,8 +11,8 @@ http://www.springframework.org/schema/beans/spring-beans-4.1.xsd">
 	    <property name="password" value="root"/>
 	</bean>
 	 
-	<bean id="employeeService" 
-	class="com.spring.services.EmployeeServiceImpl" />
+	<bean id="accountService" 
+	class="com.spring.services.AccountServiceImpl" />
 	
 	<bean id="sessionFactory"
 	    class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
@@ -24,9 +24,9 @@ http://www.springframework.org/schema/beans/spring-beans-4.1.xsd">
 	    <property name="sessionFactory" ref="sessionFactory"></property>
 	 </bean>  
 	    
-	<bean id="employeeDao_3" class="com.spring.dao.EmployeeDAOImpl" />
-	<bean id="employeeDao_2" class="com.spring.dao.EmployeeDAOTemplateImpl" />
-	<bean id="employeeDao" class="com.spring.dao.EmployeeHibernateDAOSupportImpl">
+	<bean id="accountDao_3" class="com.spring.dao.AccountDAOImpl" />
+	<bean id="accountDao_2" class="com.spring.dao.AccountDAOTemplateImpl" />
+	<bean id="accountDao" class="com.spring.dao.AccountHibernateDAOSupportImpl">
 		<property name="sessionFactory" ref="sessionFactory"></property>
 	</bean>	
 
