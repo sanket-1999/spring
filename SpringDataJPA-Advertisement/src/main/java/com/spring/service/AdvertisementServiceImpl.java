@@ -104,5 +104,31 @@ public class AdvertisementServiceImpl implements AdvertisementService {
 		return actionslist;
 
 	}
+	
+	@Override
+	public List<Advertisement> AdvertiseAsc() {
+		return AdvertUtils.convertAdvertisementEntityListToAdvertisementList(
+				advertisementRepository.findByOrderByTitleAsc());
+	}
+
+	@Override
+	public List<Advertisement> AdvertiseDesc() {
+		return AdvertUtils.convertAdvertisementEntityListToAdvertisementList(
+				advertisementRepository.findByOrderByTitleAsc());
+	}
+
+	@Override
+	public List<Advertisement> AdvertiseAscPostid() {
+		return AdvertUtils.convertAdvertisementEntityListToAdvertisementList(
+				advertisementRepository.findByOrderByTitleAsc());
+	}
+
+	@Override
+	public List<Advertisement> AdvertiseDescPostid() {
+		 
+		return AdvertUtils.convertAdvertisementEntityListToAdvertisementList(
+				advertisementRepository.findByOrderByPostIdDesc());
+	}
+
 
 }
