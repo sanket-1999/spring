@@ -52,7 +52,7 @@ public class AdvertisementController {
 		 return advertisementService.getCategory();
 	}
 	
-	@GetMapping(value="/getbysearch/{search}",produces=MediaType.APPLICATION_JSON_VALUE, consumes=MediaType.APPLICATION_JSON_VALUE)
+	@GetMapping(value="/getbysearch/{searchText}",produces=MediaType.APPLICATION_JSON_VALUE, consumes=MediaType.APPLICATION_JSON_VALUE)
 	public List<Advertisement> getBySearch(@PathVariable(name="searchText") String searchText){
 		 return advertisementService.getBySearch(searchText);
 	}
