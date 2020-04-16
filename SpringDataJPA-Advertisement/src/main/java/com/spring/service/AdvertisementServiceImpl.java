@@ -121,13 +121,13 @@ public class AdvertisementServiceImpl implements AdvertisementService {
 	@Override
 	public List<Advertisement> AdvertiseDesc() {
 		return AdvertUtils
-				.convertAdvertisementEntityListToAdvertisementList(advertisementRepository.findByOrderByTitleAsc());
+				.convertAdvertisementEntityListToAdvertisementList(advertisementRepository.findByOrderByTitleDesc());
 	}
 
 	@Override
 	public List<Advertisement> AdvertiseAscPostid() {
 		return AdvertUtils
-				.convertAdvertisementEntityListToAdvertisementList(advertisementRepository.findByOrderByTitleAsc());
+				.convertAdvertisementEntityListToAdvertisementList(advertisementRepository.findByOrderByPostIdAsc());
 	}
 
 	@Override
