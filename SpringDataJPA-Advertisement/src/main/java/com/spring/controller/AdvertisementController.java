@@ -58,11 +58,6 @@ public class AdvertisementController {
 		return advertisementService.returnActions();
 	}
 	
-	@GetMapping(value = "/actions", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
-	public List<String> returnActions() {
-		return advertisementService.returnActions();
-	}
-	
 	@GetMapping(value = "/asctitle", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
 	public List<Advertisement> AdvertiseAsc()
 	{
