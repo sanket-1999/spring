@@ -64,22 +64,22 @@ public class AdvertisementController {
 	}
 	
 	@GetMapping(value = "/asctitle", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
-	public List<Advertisement> ascAdvertisementTitle()
+	public List<Advertisement> AdvertiseAsc()
 	{
 		return advertisementService.AdvertiseAsc();
 	}
 	@GetMapping(value = "/desctitle", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
-	public List<Advertisement> descAdvertisementTitle()
+	public List<Advertisement> AdvertiseDesc()
 	{
 		return advertisementService.AdvertiseDesc();
 	}
 	@GetMapping(value = "/ascpostid", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
-	public List<Advertisement> ascAdvertisementPostid()
+	public List<Advertisement> AdvertiseAscPostid()
 	{
 		return advertisementService.AdvertiseAscPostid();
 	}
 	@GetMapping(value = "/descpostid", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
-	public List<Advertisement> descAdvertisementPostid()
+	public List<Advertisement> AdvertiseDescPostid()
 	{
 		return advertisementService.AdvertiseDescPostid();
 	}
