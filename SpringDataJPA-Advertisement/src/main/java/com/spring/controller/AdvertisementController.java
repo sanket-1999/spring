@@ -84,4 +84,9 @@ public class AdvertisementController {
 		return advertisementService.AdvertiseDescPostid();
 	}
 	
+	@RequestMapping(value="/getadvequaltodate/{date}",method=RequestMethod.GET, produces=MediaType.APPLICATION_JSON_VALUE)
+	public List<Advertisement> getEqualToTheGivenDate(@PathVariable(name = "date") String date,@RequestHeader String apikey){
+		 return advertisementService.getEqualToTheGivenDate(date, apikey);
+	}
+	
 }
