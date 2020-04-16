@@ -155,5 +155,29 @@ public class AdvertisementServiceImpl implements AdvertisementService {
 		return AdvertUtils
 				.convertAdvertisementEntityListToAdvertisementList(advertisementRepository.findByOrderByPostIdDesc());
 	}
+	
+	@Override
+	public List<Advertisement> getEqualToTheGivenDate(String date,String akey) {
+				
+		UserEntity userEntity = userRepository.findBySessionId(akey).get(0);
+		if (userEntity != null || akey != null) {
+				LocalDate localDate=LocalDate.parse(date);
+				
+				Predicate<AdvertisementEntity> predicate=(AdvertisementEntity find)->find.getLastUpdate().toLocalDate().compareTo(localDate)==0;
+				if(userEntity.getAdvertisementEntity().stream().filter(predicate).findAny().isPresent())
+				{
+					return AdvertUtils.convertAdvertisementEntityListToAdvertisementList(userEntity.getAdvertisementEntity().stream().filter(predicate).collect(Collectors.toList()));
+				}
+				else
+				{
+					return null;
+				}
+			}
+		
+			else
+			{
+				return null;
+			}
+		}
 
 }
