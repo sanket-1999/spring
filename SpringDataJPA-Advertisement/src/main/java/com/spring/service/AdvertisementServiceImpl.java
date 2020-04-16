@@ -76,14 +76,13 @@ public class AdvertisementServiceImpl implements AdvertisementService {
 		Optional<Advertisement> adssearch = AdvertUtils
 				.convertAdvertisementEntityListToAdvertisementList(advertisementRepository.findAll()).stream()
 				.filter((Advertisement find) -> find.getDescription().contains(searchText)
-						|| find.getCategory().contains(searchText) || find.getTitle().contains(searchText)
+						|| find.getTitle().contains(searchText)
 						|| find.getName().contains(searchText))
 				.findAny();
 		if (adssearch.isPresent()) {
 			return AdvertUtils.convertAdvertisementEntityListToAdvertisementList(advertisementRepository.findAll())
 					.stream()
-					.filter((Advertisement find) -> find.getCategory().contains(searchText)
-							|| find.getDescription().contains(searchText) || find.getName().contains(searchText)
+					.filter((Advertisement find) -> find.getDescription().contains(searchText) || find.getName().contains(searchText)
 							|| find.getTitle().contains(searchText))
 					.collect(Collectors.toList());
 		} else {
