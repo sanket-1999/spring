@@ -25,7 +25,7 @@ public class AdvertisementServiceImpl implements AdvertisementService {
 
 	@Override
 	public Advertisement save(Advertisement advertisement, String akey) {
-		UserEntity userEntity = userRepository.findBySessionId(akey).get(0);
+		UserEntity userEntity = userRepository.findBySessionId(akey);
 		if (userEntity != null || akey != null) {
 			AdvertisementEntity adEntity = AdvertUtils.convertAdvertisementToAdvertisementEntity(advertisement);
 			adEntity.setUserEntity(userEntity);
@@ -38,7 +38,7 @@ public class AdvertisementServiceImpl implements AdvertisementService {
 
 	@Override
 	public String updateadvertisement(Advertisement advertisement, String akey) {
-		UserEntity userEntity = userRepository.findBySessionId(akey).get(0);
+		UserEntity userEntity = userRepository.findBySessionId(akey);
 		if (userEntity != null || akey != null) {
 
 		Optional<AdvertisementEntity> searchadv=userEntity.getadvertisementEntity().
