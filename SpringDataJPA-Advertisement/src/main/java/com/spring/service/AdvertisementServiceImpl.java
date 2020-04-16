@@ -36,7 +36,6 @@ public class AdvertisementServiceImpl implements AdvertisementService {
 			adEntity.setPostId(randompostid);
 			adEntity.setLastUpdate(LocalDateTime.now());
 			adEntity.setUserEntity(userEntity);
-			advertisementRepository.save(adEntity);
 			return AdvertUtils.convertAdvertisementEntitytoAdvertisement(adEntity);
 		} else {
 			return null;
