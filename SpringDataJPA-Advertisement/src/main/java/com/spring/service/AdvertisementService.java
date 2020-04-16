@@ -8,7 +8,7 @@ public interface AdvertisementService {
 
 	public Advertisement save(Advertisement advertisement, String akey);
 
-	public String updateadvertisement(Advertisement advertisement, String key);
+	public String updateadvertisement(Advertisement advertisement, String akey);
 
 	public List<String> getCategory();
 
