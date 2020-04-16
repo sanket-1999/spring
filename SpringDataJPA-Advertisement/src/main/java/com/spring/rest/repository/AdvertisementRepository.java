@@ -12,5 +12,8 @@ public interface AdvertisementRepository extends JpaRepository<AdvertisementEnti
 	List<AdvertisementEntity> findByName(String name);
 	List<AdvertisementEntity> findByPostId(long postId);
 	List<AdvertisementEntity> findByPostId(String postId);
+	List<AdvertisementEntity> findByOrderByTitleAsc();
+	List<AdvertisementEntity> findByOrderByPostIdDesc();
+	
 }
 
