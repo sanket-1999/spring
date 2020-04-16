@@ -8,7 +8,7 @@ public interface AdvertisementService {
 
 	public Advertisement save(Advertisement advertisement, String akey);
 
-	public String updateadvertisement(Advertisement advertisement, String akey);
+	public String updateadvertisement(Advertisement advertisement, String key);
 
 	public List<String> getCategory();
 
@@ -18,9 +18,13 @@ public interface AdvertisementService {
 
 	public List<String> returnActions();
 
+	public List<Advertisement> AdvertiseAsc();
 
-	
-	
-	
+	public List<Advertisement> AdvertiseDesc();
+
+	public List<Advertisement> AdvertiseAscPostid();
+
+	public List<Advertisement> AdvertiseDescPostid();
+
 
 }
