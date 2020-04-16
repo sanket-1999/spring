@@ -27,5 +27,7 @@ public interface AdvertisementService {
 	public List<Advertisement> AdvertiseDescPostid();
 
 	public String deleteById(String akey, String postId);
+	
+	public List<Advertisement> getEqualToTheGivenDate(String date, String akey);
 
 }
