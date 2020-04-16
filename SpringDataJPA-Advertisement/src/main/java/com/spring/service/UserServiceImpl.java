@@ -95,9 +95,13 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public User getDetails(String auth) {
 		UserEntity userEntity = userRepository.findBySessionId(auth).get(0);
+		if (userEntity != null || auth != null) {
 		return UserUtils.convertUserEntityToUser(userEntity);	
+		}
+		else {
+		return null;
+		}
 	}
-
 
 
 
