@@ -23,8 +23,12 @@ li {
 .custom {
 
   border-radius: 20px;
-  
-  
-  
+    
+  }
+
+
+.img {
+
+    width: 100%; height: auto;
   }
   
