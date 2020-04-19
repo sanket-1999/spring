@@ -1,0 +1,30 @@
+.details li {
+  list-style: none;
+}
+li {
+    margin-bottom:10px;
+    
+}
+
+.container {
+  padding: 20px; 
+  border-radius: 30px; 
+  border-top: 6px solid #dc3545;
+  border-bottom: 6px solid #28a745;
+}
+
+.jumbotron {
+  border-radius: 30px;
+}
+
+
+
+
+.custom {
+
+  border-radius: 20px;
+  
+  
+  
+  }
+  

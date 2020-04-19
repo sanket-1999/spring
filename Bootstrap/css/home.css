@@ -1,0 +1,27 @@
+.custom li {
+	
+	padding: .5rem;
+	padding-left: 1rem;
+	
+}
+
+
+
+.custom li:hover {
+	
+	transform: translate(10px, 0px);
+	
+}
+
+
+.custom {
+	border-radius: 20px;
+}
+
+.container-fluid {
+
+	padding: 20px; 
+  border-radius: 30px; 
+	border-top: 6px solid #dc3545;
+	border-bottom: 6px solid #28a745;
+}
