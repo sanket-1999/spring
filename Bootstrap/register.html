@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>User Registration Page</title>
+    <!-- JQuery API -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <!-- Icons -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <!-- Bootstrap css framework -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Bootstrap JavaScript -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/register.css">
+
+    <script src="https://cdn.rawgit.com/PascaleBeier/bootstrap-validate/v2.2.0/dist/bootstrap-validate.js" ></script>
+</head>
+
+<body class="bg-info">
+    <header class="bg-info" style="height: 60px; padding: 5px;">
+        <h3 class="text-light " style="text-align: center;">REGISTER</h3>
+    </header>
+    <div class="container ">
+        <div class="row">
+            
+            <div class="col-sm-6 offset-sm-3 bg-light custom">
+                <form name="theform" >
+                    <div class="form-group">
+                        <div class="width30 float-left">  <label    >First name</label></div>
+                        <div class="width70 float-right"><input id = "fname" class=" form-control" name="firstname" type="text"
+                                 size="20" required>
+     
+                                </div>
+                    </div>
+                  
+                    
+                    <br>
+                    <div class="form-group">
+                        <div class="width30 float-left"><label>Lastname</label></div>
+                        <div class="width70 float-right"><input id= "lname" class=" form-control" name="lastname" type="text"
+                                 size="20" required></div>
+                    </div><br>
+                    <div class="form-group">
+                        <div class="width30 float-left"><label>Email</label></div>
+                        <div class="width70 float-right"><input id="email" class=" form-control" name="email" src="" type="text"
+                                 size="20" required></div>
+                    </div><br>
+                    <div class="form-group">
+                        <div class="width30 float-left"><label>Phone number</label></div>
+                        <div class="width70 float-right"><input id="phone" class=" form-control" name="phone" type="text" 
+                                size="20" required></div>
+                    </div><br>
+
+
+                    <div class="form-group">
+                        <div class="width30 float-left"><label>Username</label></div>
+                        <div class="width70 float-right"><input id="user" class=" form-control" name="username" size="20"
+                                type="password" required></div>
+                    </div><br>
+                    <div class="form-group">
+                        <div class="width30 float-left"><label>Password</label></div>
+                        <div class="width70 float-right"><input id="pass" class=" form-control" name="password"
+                                type="password" size="20" required></div>
+                    </div><br>
+
+                    <br><br><br>
+
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="width50"><input class="btn btn-success" type="submit" value="Submit"
+                                    style="font-weight: bold"></div>
+                            <div class="width50"><input class="btn btn-danger" type="reset" style="font-weight: bold">
+                               
+                            </div>
+                            <br>
+                        </div>
+                        <br> <div class="text-center">  <a href="login.html" class="text-info" >Already user ?</a> </div>
+                    </div>
+                </form>
+            </div>
+         
+        </div>
+    </div>
+
+
+    <script>
+    bootstrapValidate('#fname', 'min:2:First name cant be 1 letter')
+    bootstrapValidate('#lname', 'min:2:Lastname cant be  1 letter   ')
+    bootstrapValidate('#email', 'email:Enter valid email')
+    bootstrapValidate('#phone', 'numeric:Enter only numeric value')
+    bootstrapValidate('#user', 'min:5:Should be minimum 5 character')
+    bootstrapValidate('#pass', 'min:7:Should be atleast 7 character long')
+</script>
+
+</body>
+
+
+</html>
